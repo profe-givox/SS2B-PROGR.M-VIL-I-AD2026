@@ -138,6 +138,7 @@ fun GameLayout(modifier: Modifier = Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.padding(mediumPadding)
         ) {
+
             Text(
                 modifier = Modifier
                     .clip(shapes.medium)
