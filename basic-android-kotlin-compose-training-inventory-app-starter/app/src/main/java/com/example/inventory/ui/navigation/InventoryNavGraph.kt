@@ -48,8 +48,8 @@ fun InventoryNavHost(
         composable(route = HomeDestination.route) {
             HomeScreen(
                 navigateToItemEntry = { navController.navigate(ItemEntryDestination.route) },
-                navigateToItemUpdate = {
-                    navController.navigate("${ItemDetailsDestination.route}/${it}")
+                navigateToItemUpdate = { id ->
+                    navController.navigate("${ItemDetailsDestination.route}/${id}")
                 }
             )
         }
