@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -81,7 +82,12 @@ fun PhotosGridScreen(
         contentPadding = contentPadding,
     ) {
         items(items = photos, key = { photo -> photo.id }) {
-            photo -> MarsPhotoCard(photo, modifier = modifier)
+            photo -> MarsPhotoCard(photo,
+            modifier = modifier
+                .padding(4.dp)
+                .fillMaxWidth()
+                .aspectRatio(1.5f)
+            )
 
         }
     }
